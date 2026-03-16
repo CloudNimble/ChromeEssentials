@@ -59,19 +59,20 @@ public sealed class DomNode
     public DomNode[]? Children { get; set; }
 
     /// <summary>
-    /// Gets or sets the node's attributes as a flat array of [name, value, name, value, ...].
+    /// Gets or sets the attributes of the <c>Element</c> node in the form of flat array
+    /// <c>[name1, value1, name2, value2]</c>.
     /// </summary>
     [JsonPropertyName("attributes")]
     public string[]? Attributes { get; set; }
 
     /// <summary>
-    /// Gets or sets the document URL (only for document nodes).
+    /// Gets or sets the document URL that <c>Document</c> or <c>FrameOwner</c> node points to.
     /// </summary>
     [JsonPropertyName("documentURL")]
     public string? DocumentURL { get; set; }
 
     /// <summary>
-    /// Gets or sets the frame ID for frame owner elements.
+    /// Gets or sets the frame ID for frame owner elements and <c>Document</c> nodes.
     /// </summary>
     [JsonPropertyName("frameId")]
     public string? FrameId { get; set; }
