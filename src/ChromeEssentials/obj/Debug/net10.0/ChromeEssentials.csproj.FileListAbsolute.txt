@@ -1,0 +1,11 @@
+/home/user/ChromeEssentials/src/ChromeEssentials/bin/Debug/net10.0/ChromeEssentials.deps.json
+/home/user/ChromeEssentials/src/ChromeEssentials/bin/Debug/net10.0/ChromeEssentials.dll
+/home/user/ChromeEssentials/src/ChromeEssentials/bin/Debug/net10.0/ChromeEssentials.pdb
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ChromeEssentials.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ChromeEssentials.AssemblyInfoInputs.cache
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ChromeEssentials.AssemblyInfo.cs
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ChromeEssentials.csproj.CoreCompileInputs.cache
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ChromeEssentials.dll
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/refint/ChromeEssentials.dll
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ChromeEssentials.pdb
+/home/user/ChromeEssentials/src/ChromeEssentials/obj/Debug/net10.0/ref/ChromeEssentials.dll

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>CloudNimble.ChromeEssentials</RootNamespace>
+    <AssemblyName>ChromeEssentials</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>ChromeEssentials</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>CloudNimble</Authors>
+    <Description>Core Chrome DevTools Protocol (CDP) types and WebSocket client. AOT-compatible with full JSON source generation support.</Description>
+    <PackageTags>chrome;cdp;devtools;devtools-protocol;websocket;aot</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/CloudNimble/ChromeEssentials</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/CloudNimble/ChromeEssentials</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- AOT Compatibility -->
+    <IsAotCompatible>true</IsAotCompatible>
+    <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+
+    <!-- Platform-guarded calls are safe -->
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+</Project>
