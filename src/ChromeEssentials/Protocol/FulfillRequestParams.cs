@@ -4,38 +4,41 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Fetch.fulfillRequest</c> CDP command.
-/// Provides a synthetic response to a paused request.
+/// Provides response to the request.
 /// </summary>
 public sealed class FulfillRequestParams
 {
     /// <summary>
-    /// Gets or sets the request interception ID.
+    /// Gets or sets an id the client received in requestPaused event.
     /// </summary>
     [JsonPropertyName("requestId")]
     public string RequestId { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the HTTP response code to use.
+    /// Gets or sets an HTTP response code.
     /// </summary>
     [JsonPropertyName("responseCode")]
     public int ResponseCode { get; set; }
 
     /// <summary>
-    /// Gets or sets the response headers.
+    /// Gets or sets response headers.
     /// </summary>
     [JsonPropertyName("responseHeaders")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HeaderEntry[]? ResponseHeaders { get; set; }
 
     /// <summary>
-    /// Gets or sets the Base64-encoded response body.
+    /// Gets or sets a response body. If absent, original response body will be used if the request
+    /// is intercepted at the response stage and empty body will be used if the request is intercepted
+    /// at the request stage.
     /// </summary>
     [JsonPropertyName("body")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Body { get; set; }
 
     /// <summary>
-    /// Gets or sets the response phrase (e.g., <c>"OK"</c>).
+    /// Gets or sets a textual representation of responseCode.
+    /// If absent, a standard phrase matching responseCode is used.
     /// </summary>
     [JsonPropertyName("responsePhrase")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

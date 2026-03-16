@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class SetCookieResult
 {
     /// <summary>
-    /// Gets or sets a value indicating whether the cookie was successfully set.
+    /// Always set to true. If an error occurs, the response itself will have HTTP status 500.
     /// </summary>
     [JsonPropertyName("success")]
     public bool Success { get; set; }

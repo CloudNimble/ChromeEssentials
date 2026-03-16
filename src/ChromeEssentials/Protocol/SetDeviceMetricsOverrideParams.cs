@@ -4,7 +4,9 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Emulation.setDeviceMetricsOverride</c> CDP command.
-/// Overrides the values of device screen dimensions and other metrics.
+/// Overrides the values of device screen dimensions (<c>window.screen.width</c>,
+/// <c>window.screen.height</c>, <c>window.innerWidth</c>, <c>window.innerHeight</c>, and
+/// <c>"device-width"</c>/<c>"device-height"</c>-related CSS media query results).
 /// </summary>
 public sealed class SetDeviceMetricsOverrideParams
 {

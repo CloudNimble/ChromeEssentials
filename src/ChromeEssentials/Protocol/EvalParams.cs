@@ -4,40 +4,38 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Runtime.evaluate</c> CDP command.
-/// Evaluates a JavaScript expression in the context of the inspected page.
+/// Evaluates expression on global object.
 /// </summary>
 public sealed class EvalParams
 {
     /// <summary>
-    /// Gets or sets the JavaScript expression to evaluate.
+    /// Expression to evaluate.
     /// </summary>
     [JsonPropertyName("expression")]
     public string Expression { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets a value indicating whether the result should be returned by value (serialized).
-    /// When <c>true</c>, the result is returned as a JSON-compatible value rather than a remote object reference.
+    /// Whether the result is expected to be a JSON object that should be sent by value.
     /// </summary>
     [JsonPropertyName("returnByValue")]
     public bool ReturnByValue { get; set; }
 
     /// <summary>
-    /// Gets or sets a value indicating whether execution should wait for the expression's promise to resolve.
-    /// When <c>true</c> and the expression returns a <c>Promise</c>, the result will be the resolved value.
+    /// Whether execution should await for resulting value and return once awaited promise is resolved.
     /// </summary>
     [JsonPropertyName("awaitPromise")]
     public bool AwaitPromise { get; set; }
 
     /// <summary>
-    /// Gets or sets the execution context ID to evaluate the expression in. If omitted, uses the default context.
-    /// Required for evaluating in specific frames or isolated worlds.
+    /// Specifies in which execution context to perform evaluation. If the parameter is omitted the
+    /// evaluation will be performed in the context of the inspected page.
     /// </summary>
     [JsonPropertyName("contextId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int? ContextId { get; set; }
 
     /// <summary>
-    /// Gets or sets a value indicating whether the evaluation should be treated as initiated by a user gesture.
+    /// Whether execution should be treated as initiated by user in the UI.
     /// </summary>
     [JsonPropertyName("userGesture")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]

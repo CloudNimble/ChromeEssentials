@@ -8,13 +8,13 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class ExceptionDetails
 {
     /// <summary>
-    /// Gets or sets the exception text (a short description of the error).
+    /// Exception text, which should be used together with exception object when available.
     /// </summary>
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 
     /// <summary>
-    /// Gets or sets the exception object containing detailed information about the error.
+    /// Exception object if available.
     /// </summary>
     [JsonPropertyName("exception")]
     public ExceptionInfo? Exception { get; set; }

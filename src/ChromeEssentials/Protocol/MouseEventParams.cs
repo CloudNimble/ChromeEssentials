@@ -4,12 +4,13 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Input.dispatchMouseEvent</c> CDP command.
-/// Dispatches a synthetic mouse event to the page.
+/// Dispatches a mouse event to the page.
 /// </summary>
 public sealed class MouseEventParams
 {
     /// <summary>
-    /// Gets or sets the type of mouse event (e.g., <c>"mousePressed"</c>, <c>"mouseReleased"</c>, <c>"mouseMoved"</c>).
+    /// Gets or sets the type of the mouse event.
+    /// Allowed values: <c>"mousePressed"</c>, <c>"mouseReleased"</c>, <c>"mouseMoved"</c>, <c>"mouseWheel"</c>.
     /// </summary>
     [JsonPropertyName("type")]
     public string Type { get; set; } = "";
@@ -27,21 +28,20 @@ public sealed class MouseEventParams
     public double Y { get; set; }
 
     /// <summary>
-    /// Gets or sets the mouse button being pressed or released (e.g., <c>"left"</c>, <c>"middle"</c>, <c>"right"</c>).
-    /// Defaults to <c>"left"</c>.
+    /// Gets or sets the mouse button (default: <c>"none"</c>).
     /// </summary>
     [JsonPropertyName("button")]
     public string Button { get; set; } = "left";
 
     /// <summary>
-    /// Gets or sets the number of times the mouse button was clicked. Defaults to 1.
+    /// Gets or sets the number of times the mouse button was clicked (default: 0).
     /// </summary>
     [JsonPropertyName("clickCount")]
     public int ClickCount { get; set; } = 1;
 
     /// <summary>
     /// Gets or sets the bit field representing pressed modifier keys.
-    /// 1 = Alt, 2 = Ctrl, 4 = Meta/Command, 8 = Shift.
+    /// Alt=1, Ctrl=2, Meta/Command=4, Shift=8 (default: 0).
     /// </summary>
     [JsonPropertyName("modifiers")]
     public int Modifiers { get; set; }

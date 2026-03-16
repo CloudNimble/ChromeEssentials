@@ -4,7 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Represents the result of the <c>Target.getTargets</c> CDP command.
-/// Contains an array of all available browser targets.
+/// Retrieves a list of available targets.
 /// </summary>
 public sealed class GetTargetsResult
 {

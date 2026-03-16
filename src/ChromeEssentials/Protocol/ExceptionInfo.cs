@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class ExceptionInfo
 {
     /// <summary>
-    /// Gets or sets the full description of the exception, including the stack trace.
+    /// String representation of the object.
     /// </summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }

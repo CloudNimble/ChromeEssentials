@@ -4,6 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Event parameters for the <c>Network.loadingFinished</c> event.
+/// Fired when HTTP request has finished loading.
 /// </summary>
 public sealed class LoadingFinishedParams
 {
@@ -14,7 +15,7 @@ public sealed class LoadingFinishedParams
     public string RequestId { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the timestamp when loading finished.
+    /// Gets or sets the monotonically increasing time in seconds since an arbitrary point in the past.
     /// </summary>
     [JsonPropertyName("timestamp")]
     public double Timestamp { get; set; }

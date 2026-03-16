@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class CreateTargetResult
 {
     /// <summary>
-    /// Gets or sets the target ID of the newly created target.
+    /// Gets or sets the id of the page opened.
     /// </summary>
     [JsonPropertyName("targetId")]
     public string TargetId { get; set; } = "";

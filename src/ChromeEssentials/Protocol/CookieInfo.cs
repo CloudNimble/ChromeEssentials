@@ -32,37 +32,37 @@ public sealed class CookieInfo
     public string Path { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the cookie expiration date as a Unix timestamp.
+    /// Gets or sets the cookie expiration date as the number of seconds since the UNIX epoch.
     /// </summary>
     [JsonPropertyName("expires")]
     public double Expires { get; set; }
 
     /// <summary>
-    /// Gets or sets the cookie size in bytes.
+    /// Gets or sets the cookie size.
     /// </summary>
     [JsonPropertyName("size")]
     public int Size { get; set; }
 
     /// <summary>
-    /// Gets or sets whether the cookie is HTTP-only.
+    /// Gets or sets a value indicating whether the cookie is http-only.
     /// </summary>
     [JsonPropertyName("httpOnly")]
     public bool HttpOnly { get; set; }
 
     /// <summary>
-    /// Gets or sets whether the cookie is secure.
+    /// Gets or sets a value indicating whether the cookie is secure.
     /// </summary>
     [JsonPropertyName("secure")]
     public bool Secure { get; set; }
 
     /// <summary>
-    /// Gets or sets whether the cookie is a session cookie (no expiry).
+    /// Gets or sets a value indicating whether this is a session cookie.
     /// </summary>
     [JsonPropertyName("session")]
     public bool Session { get; set; }
 
     /// <summary>
-    /// Gets or sets the SameSite attribute.
+    /// Gets or sets the cookie SameSite type.
     /// </summary>
     [JsonPropertyName("sameSite")]
     public string? SameSite { get; set; }

@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class GetCookiesResult
 {
     /// <summary>
-    /// Gets or sets the array of cookies.
+    /// Gets or sets the array of cookie objects.
     /// </summary>
     [JsonPropertyName("cookies")]
     public CookieInfo[] Cookies { get; set; } = [];

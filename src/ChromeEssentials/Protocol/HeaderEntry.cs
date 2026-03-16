@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
-/// Represents an HTTP header as a name-value pair, used by the Fetch domain.
+/// Response HTTP header entry.
 /// </summary>
 public sealed class HeaderEntry
 {

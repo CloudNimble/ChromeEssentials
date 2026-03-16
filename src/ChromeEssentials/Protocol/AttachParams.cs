@@ -4,6 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Target.attachToTarget</c> CDP command.
+/// Attaches to the target with given id.
 /// </summary>
 public sealed class AttachParams
 {
@@ -14,7 +15,7 @@ public sealed class AttachParams
     public string TargetId { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets a value indicating whether to use the flatten protocol (required for modern CDP).
+    /// Gets or sets a value indicating whether to enable "flat" access to the session via specifying sessionId attribute in the commands.
     /// </summary>
     [JsonPropertyName("flatten")]
     public bool Flatten { get; set; }

@@ -9,14 +9,14 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class CallArgument
 {
     /// <summary>
-    /// Gets or sets the primitive value of the argument.
+    /// Primitive value or serializable javascript object.
     /// </summary>
     [JsonPropertyName("value")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public JsonElement? Value { get; set; }
 
     /// <summary>
-    /// Gets or sets the remote object handle to pass as the argument.
+    /// Remote object handle.
     /// </summary>
     [JsonPropertyName("objectId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

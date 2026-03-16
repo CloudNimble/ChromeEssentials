@@ -8,13 +8,13 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class PrintToPdfResult
 {
     /// <summary>
-    /// Gets or sets the Base64-encoded PDF data.
+    /// Gets or sets the Base64-encoded pdf data.
     /// </summary>
     [JsonPropertyName("data")]
     public string Data { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets a stream handle for streaming transfer. Only present when <c>transferMode</c> is <c>"ReturnAsStream"</c>.
+    /// Gets or sets a handle of the stream that holds resulting PDF data.
     /// </summary>
     [JsonPropertyName("stream")]
     public string? Stream { get; set; }

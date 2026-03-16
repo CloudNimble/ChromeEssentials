@@ -8,19 +8,19 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class NavigateResult
 {
     /// <summary>
-    /// Gets or sets the frame ID of the navigated frame.
+    /// Gets or sets the frame id that has navigated (or failed to navigate).
     /// </summary>
     [JsonPropertyName("frameId")]
     public string? FrameId { get; set; }
 
     /// <summary>
-    /// Gets or sets the error text if navigation failed, or <c>null</c> on success.
+    /// Gets or sets the user friendly error message, present if and only if navigation has failed.
     /// </summary>
     [JsonPropertyName("errorText")]
     public string? ErrorText { get; set; }
 
     /// <summary>
-    /// Gets or sets the loader identifier for the navigation.
+    /// Gets or sets the loader identifier.
     /// </summary>
     [JsonPropertyName("loaderId")]
     public string? LoaderId { get; set; }

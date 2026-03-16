@@ -4,7 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Target.targetDestroyed</c> CDP event.
-/// Emitted when a target is destroyed (e.g., a tab is closed).
+/// Issued when a target is destroyed.
 /// </summary>
 public sealed class TargetDestroyedParams
 {

@@ -5,30 +5,33 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Event parameters for the <c>Runtime.consoleAPICalled</c> event.
-/// Fired when a console API method is called (e.g., console.log, console.error).
+/// Issued when console API was called.
 /// </summary>
 public sealed class ConsoleApiCalledParams
 {
     /// <summary>
-    /// Gets or sets the type of console call (e.g., <c>"log"</c>, <c>"error"</c>, <c>"warning"</c>, <c>"info"</c>).
+    /// Type of the call. Allowed values: <c>log</c>, <c>debug</c>, <c>info</c>, <c>error</c>, <c>warning</c>,
+    /// <c>dir</c>, <c>dirxml</c>, <c>table</c>, <c>trace</c>, <c>clear</c>, <c>startGroup</c>,
+    /// <c>startGroupCollapsed</c>, <c>endGroup</c>, <c>assert</c>, <c>profile</c>, <c>profileEnd</c>,
+    /// <c>count</c>, <c>timeEnd</c>.
     /// </summary>
     [JsonPropertyName("type")]
     public string Type { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the call arguments as an array of remote objects.
+    /// Call arguments.
     /// </summary>
     [JsonPropertyName("args")]
     public RemoteObject[] Args { get; set; } = [];
 
     /// <summary>
-    /// Gets or sets the execution context ID where the call was made.
+    /// Identifier of the context where the call was made.
     /// </summary>
     [JsonPropertyName("executionContextId")]
     public int ExecutionContextId { get; set; }
 
     /// <summary>
-    /// Gets or sets the call timestamp.
+    /// Call timestamp.
     /// </summary>
     [JsonPropertyName("timestamp")]
     public double Timestamp { get; set; }

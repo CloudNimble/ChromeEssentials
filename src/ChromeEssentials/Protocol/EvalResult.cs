@@ -8,13 +8,13 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class EvalResult
 {
     /// <summary>
-    /// Gets or sets the evaluation result value.
+    /// Evaluation result.
     /// </summary>
     [JsonPropertyName("result")]
     public EvalResultValue Result { get; set; } = new();
 
     /// <summary>
-    /// Gets or sets exception details if the evaluation threw an error, or <c>null</c> on success.
+    /// Exception details.
     /// </summary>
     [JsonPropertyName("exceptionDetails")]
     public ExceptionDetails? ExceptionDetails { get; set; }

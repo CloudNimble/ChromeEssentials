@@ -4,18 +4,18 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Page.addScriptToEvaluateOnNewDocument</c> CDP command.
-/// Injects a script that will be evaluated on every new document creation (including subframes).
+/// Evaluates given script in every frame upon creation (before loading frame's scripts).
 /// </summary>
 public sealed class AddScriptToEvaluateOnNewDocumentParams
 {
     /// <summary>
-    /// Gets or sets the JavaScript source code to inject.
+    /// Gets or sets the script source code.
     /// </summary>
     [JsonPropertyName("source")]
     public string Source { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets an optional world name for isolated world execution.
+    /// Gets or sets the world name. If specified, creates an isolated world with the given name and evaluates given script in it.
     /// </summary>
     [JsonPropertyName("worldName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

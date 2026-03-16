@@ -3,18 +3,18 @@ using System.Text.Json.Serialization;
 namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
-/// Represents a frame tree structure returned by the <c>Page.getFrameTree</c> CDP command.
+/// Represents a FrameTree type in the CDP protocol.
 /// </summary>
 public sealed class FrameTree
 {
     /// <summary>
-    /// Gets or sets the frame information.
+    /// Gets or sets the frame information for this tree item.
     /// </summary>
     [JsonPropertyName("frame")]
     public FrameInfo Frame { get; set; } = new();
 
     /// <summary>
-    /// Gets or sets the child frame trees.
+    /// Gets or sets the child frames.
     /// </summary>
     [JsonPropertyName("childFrames")]
     public FrameTree[]? ChildFrames { get; set; }

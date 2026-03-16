@@ -4,7 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Event parameters for the <c>Network.responseReceived</c> event.
-/// Fired when an HTTP response is received.
+/// Fired when HTTP response is available.
 /// </summary>
 public sealed class ResponseReceivedParams
 {
@@ -15,13 +15,13 @@ public sealed class ResponseReceivedParams
     public string RequestId { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the loader identifier.
+    /// Gets or sets the loader identifier. Empty string if the request is fetched from worker.
     /// </summary>
     [JsonPropertyName("loaderId")]
     public string LoaderId { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the timestamp.
+    /// Gets or sets the monotonically increasing time in seconds since an arbitrary point in the past.
     /// </summary>
     [JsonPropertyName("timestamp")]
     public double Timestamp { get; set; }
@@ -33,7 +33,7 @@ public sealed class ResponseReceivedParams
     public string Type { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the response details.
+    /// Gets or sets the response data.
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseInfo Response { get; set; } = new();

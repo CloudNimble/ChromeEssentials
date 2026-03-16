@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class AddScriptToEvaluateOnNewDocumentResult
 {
     /// <summary>
-    /// Gets or sets the identifier of the added script, which can be used to remove it later.
+    /// Gets or sets the identifier of the added script.
     /// </summary>
     [JsonPropertyName("identifier")]
     public string Identifier { get; set; } = "";

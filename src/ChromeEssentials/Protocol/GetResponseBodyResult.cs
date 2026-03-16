@@ -8,13 +8,13 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class GetResponseBodyResult
 {
     /// <summary>
-    /// Gets or sets the response body content. If <see cref="Base64Encoded"/> is true, this is Base64-encoded.
+    /// Gets or sets the response body.
     /// </summary>
     [JsonPropertyName("body")]
     public string Body { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets a value indicating whether the body content is Base64-encoded.
+    /// Gets or sets a value indicating whether the content was sent as base64.
     /// </summary>
     [JsonPropertyName("base64Encoded")]
     public bool Base64Encoded { get; set; }

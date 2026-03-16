@@ -4,6 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Event parameters for the <c>Network.loadingFailed</c> event.
+/// Fired when HTTP request has failed to load.
 /// </summary>
 public sealed class LoadingFailedParams
 {
@@ -14,7 +15,7 @@ public sealed class LoadingFailedParams
     public string RequestId { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the timestamp when loading failed.
+    /// Gets or sets the monotonically increasing time in seconds since an arbitrary point in the past.
     /// </summary>
     [JsonPropertyName("timestamp")]
     public double Timestamp { get; set; }
@@ -26,13 +27,13 @@ public sealed class LoadingFailedParams
     public string Type { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the error message describing the failure.
+    /// Gets or sets the user friendly error message.
     /// </summary>
     [JsonPropertyName("errorText")]
     public string ErrorText { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets a value indicating whether the request was canceled.
+    /// Gets or sets a value indicating whether loading was canceled.
     /// </summary>
     [JsonPropertyName("canceled")]
     public bool Canceled { get; set; }

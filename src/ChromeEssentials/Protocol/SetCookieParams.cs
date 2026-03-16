@@ -4,7 +4,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 
 /// <summary>
 /// Parameters for the <c>Network.setCookie</c> CDP command.
-/// Sets a cookie with the given properties.
+/// Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
 /// </summary>
 public sealed class SetCookieParams
 {
@@ -21,7 +21,7 @@ public sealed class SetCookieParams
     public string Value { get; set; } = "";
 
     /// <summary>
-    /// Gets or sets the cookie URL. If omitted, <see cref="Domain"/> and <see cref="Path"/> must be provided.
+    /// Gets or sets the request-URI to associate with the setting of the cookie.
     /// </summary>
     [JsonPropertyName("url")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -42,28 +42,28 @@ public sealed class SetCookieParams
     public string? Path { get; set; }
 
     /// <summary>
-    /// Gets or sets whether the cookie is secure (HTTPS only).
+    /// Gets or sets a value indicating whether the cookie is secure.
     /// </summary>
     [JsonPropertyName("secure")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public bool Secure { get; set; }
 
     /// <summary>
-    /// Gets or sets whether the cookie is HTTP-only (not accessible via JavaScript).
+    /// Gets or sets a value indicating whether the cookie is http-only.
     /// </summary>
     [JsonPropertyName("httpOnly")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public bool HttpOnly { get; set; }
 
     /// <summary>
-    /// Gets or sets the cookie SameSite attribute (<c>"Strict"</c>, <c>"Lax"</c>, or <c>"None"</c>).
+    /// Gets or sets the cookie SameSite type.
     /// </summary>
     [JsonPropertyName("sameSite")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? SameSite { get; set; }
 
     /// <summary>
-    /// Gets or sets the cookie expiration date as a Unix timestamp in seconds.
+    /// Gets or sets the cookie expiration date, session cookie if not set.
     /// </summary>
     [JsonPropertyName("expires")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
