@@ -9,14 +9,14 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class SetEmulatedMediaParams
 {
     /// <summary>
-    /// Gets or sets the media type to emulate (e.g., <c>"screen"</c>, <c>"print"</c>). Empty string disables the override.
+    /// Gets or sets the media type to emulate. Empty string disables the override.
     /// </summary>
     [JsonPropertyName("media")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Media { get; set; }
 
     /// <summary>
-    /// Gets or sets the media features to emulate (e.g., <c>prefers-color-scheme</c>).
+    /// Gets or sets the media features to emulate.
     /// </summary>
     [JsonPropertyName("features")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
