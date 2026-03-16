@@ -25,13 +25,6 @@ public sealed class SetUserAgentOverrideParams
     /// <summary>
     /// Gets or sets the platform navigator.platform should return.
     /// </summary>
-    [JsonPropertyName("acceptLanguage")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string? AcceptLanguage { get; set; }
-
-    /// <summary>
-    /// Gets or sets the platform string to use (e.g., <c>"Win32"</c>, <c>"Linux x86_64"</c>).
-    /// </summary>
     [JsonPropertyName("platform")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Platform { get; set; }
