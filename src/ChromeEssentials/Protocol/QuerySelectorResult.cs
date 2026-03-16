@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class QuerySelectorResult
 {
     /// <summary>
-    /// Gets or sets the node ID of the matching element, or 0 if no match was found.
+    /// Gets or sets the query selector result.
     /// </summary>
     [JsonPropertyName("nodeId")]
     public int NodeId { get; set; }

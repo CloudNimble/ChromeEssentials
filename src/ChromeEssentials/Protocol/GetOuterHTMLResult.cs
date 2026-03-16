@@ -8,7 +8,7 @@ namespace CloudNimble.ChromeEssentials.Protocol;
 public sealed class GetOuterHTMLResult
 {
     /// <summary>
-    /// Gets or sets the outer HTML of the node.
+    /// Gets or sets the outer HTML markup.
     /// </summary>
     [JsonPropertyName("outerHTML")]
     public string OuterHTML { get; set; } = "";
