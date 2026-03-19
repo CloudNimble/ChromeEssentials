@@ -1,0 +1,24 @@
+/* Background Gradient - Updated from teal/green to orange
+ *
+ * Previous gradient colors (teal/green):
+ *   0%:   #1C4A60
+ *   30%:  #225365
+ *   73%:  #316971
+ *   100%: #3E7C7B
+ *
+ * Updated gradient colors (orange):
+ *   0%:   #603A1C
+ *   30%:  #654622
+ *   73%:  #714F31
+ *   100%: #7B5C3E
+ */
+
+.background-gradient {
+  background: linear-gradient(
+    to right,
+    #603A1C 0%,
+    #654622 30%,
+    #714F31 73%,
+    #7B5C3E 100%
+  );
+}
